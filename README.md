@@ -1,5 +1,5 @@
 # faroptic-clone
-
+this is a clone of the website [faroptic](https://faroptic.com/) but i'm going to be using vue so the final website will be spa.
 ## Project setup
 ```
 npm install
