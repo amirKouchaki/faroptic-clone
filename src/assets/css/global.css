@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;700&display=swap');
+:root {
+    --bg-accent1-light: rgb(171, 233, 203);
+    --bg-accent2-light: rgb(0, 0, 0);
+    --bg-accent3-light: rgb(22, 22, 22);
+    --link-primary-light: rgb(83, 128, 106);
+    --text-header-primary-light: rgb(27, 27, 27);
+    --link-nav-primary-light: rgb(94, 94, 94);
+    --border-primary-light: rgb(228, 226, 226);
+    --text-primary-light: #2c3e50;
+    --text-secondary-light: rgb(94, 94, 94);
+    --text-footer-primary-light: rgb(89, 89, 89);
+    --text-new-feature-p-light: rgb(60, 67, 63);
+    --btn-primary-light: rgb(48, 48, 48);
+    --text-3-light: rgb(255, 255, 255);
+    --text-4-light: rgb(247, 247, 247);
+    --privacy-paragraph-light: rgb(169, 169, 169);
+
+    --bg-accent1: var(--bg-accent1-light);
+    --bg-accent3: var(--bg-accent3-light);
+    --link-primary: var(--link-primary-light);
+    --text-header-primary: var(--text-header-primary-light);
+    --link-nav-primary: var(--link-nav-primary-light);
+    --border-primary: var(--border-primary-light);
+    --text-primary: var(--text-primary-light);
+    --text-secondary: var(--text-secondary-light);
+    --text-footer-primary: var(--text-footer-primary-light);
+    --text-new-feature-p: var(--text-new-feature-p-light);
+    --btn-primary: var(--btn-primary-light);
+    --text-3: var(--text-3-light);
+    --text-4: var(--text-4-light);
+    --bg-accent2: var(--bg-accent2-light);
+    --privacy-paragraph: var(--privacy-paragraph-light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--bg-accent1);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+.container {
+    position: relative;
+    width: min(69.5em, 90%);
+    margin: 0 auto;
+}
+
+button,
+a {
+    display: inline-block;
+}
+
+button,
+img {
+    user-select: none;
+}
+
+.reset-margin {
+    margin: 0 !important;
+}
