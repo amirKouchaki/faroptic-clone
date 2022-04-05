@@ -6,13 +6,15 @@
             iSrc="https://player.vimeo.com/video/674464619?h=2cbd4818da&autoplay=1&loop=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
         />
     </section>
-    <aside>
+    <aside class="who-we-are-aside">
         <div class="container">
-            <img
-                class="home-img"
-                src="@/assets/images/home-img-1.webp"
-                alt="who we are image"
-            />
+            <div>
+                <img
+                    class="home-img"
+                    src="@/assets/images/home-img-1.webp"
+                    alt="who we are image"
+                />
+            </div>
             <section class="info-section">
                 <Heading>who we are</Heading>
                 <section>
@@ -83,44 +85,50 @@
     <article class="new-feature-article">
         <div class="container">
             <Heading>Some new features added</Heading>
-            <Iframe
-                class="aspect-30"
-                iTitle="vimeo video"
-                iSrc="https://player.vimeo.com/video/668225655?h=57e7d16b8a"
-            />
-            <div>
-                <h3 class="new-feature-header">Displaced markers</h3>
-                <p class="new-feature-p">
-                    Use triple tap on screen to enter edit mode.Then you can
-                    adjust displaced marker location and return to normal mode
-                    by a triple tap again
-                </p>
-            </div>
-            <Iframe
-                class="aspect-50"
-                iSrc="https://www.youtube.com/embed/9GtojuRcAnE"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            />
-            <div>
-                <h3 class="new-feature-header">
-                    Flat top segments & Corridor length
-                </h3>
-                <p class="new-feature-p">
-                    Use double tap on the middle red marker to present these
-                    tools
-                </p>
-            </div>
-            <img src="@/assets/images/new-features-img.webp" alt="" />
-            <div>
-                <h3 class="new-feature-header">video library</h3>
-                <p class="new-feature-p">More features & videos</p>
-                <router-link
-                    :to="{ name: 'videoLibrary' }"
-                    class="new-feature-btn"
-                    >Check it out now</router-link
-                >
+            <div class="feature-grid">
+                <Iframe
+                    class="aspect-30"
+                    iTitle="vimeo video"
+                    iSrc="https://player.vimeo.com/video/668225655?h=57e7d16b8a"
+                />
+                <div class="grid-child">
+                    <h3 class="new-feature-header">Displaced markers</h3>
+                    <p class="new-feature-p">
+                        Use triple tap on screen to enter edit mode.Then you can
+                        adjust displaced marker location and return to normal
+                        mode by a triple tap again
+                    </p>
+                </div>
+                <Iframe
+                    class="aspect-50"
+                    iSrc="https://www.youtube.com/embed/9GtojuRcAnE"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                />
+                <div class="grid-child">
+                    <h3 class="new-feature-header">
+                        Flat top segments & Corridor length
+                    </h3>
+                    <p class="new-feature-p">
+                        Use double tap on the middle red marker to present these
+                        tools
+                    </p>
+                </div>
+                <img
+                    class="grid-child"
+                    src="@/assets/images/new-features-img.webp"
+                    alt=""
+                />
+                <div class="grid-child">
+                    <h3 class="new-feature-header">video library</h3>
+                    <p class="new-feature-p">More features & videos</p>
+                    <router-link
+                        :to="{ name: 'videoLibrary' }"
+                        class="new-feature-btn"
+                        >Check it out now</router-link
+                    >
+                </div>
             </div>
         </div>
     </article>
@@ -133,90 +141,102 @@
     <section class="contact-us-section">
         <div class="container">
             <Heading class="white">contact us</Heading>
-            <form
-                @submit.prevent="sendForm()"
-                enctype="multipart/form-data"
-                class="contact-form"
-                action=""
-            >
-                <h3 class="form-header">send a message</h3>
-                <FormGroup
-                    fType="text"
-                    fId="fullName"
-                    @updated="(model) => (fullName = model)"
-                    >Name(First,Last)*</FormGroup
-                >
-                <FormGroup
-                    fType="tel"
-                    fId="phone"
-                    @updated="(model) => (phone = model)"
-                    >Phone*</FormGroup
-                >
-                <FormGroup
-                    fType="text"
-                    fId="email"
-                    @updated="(model) => (email = model)"
-                    >Email*</FormGroup
-                >
-                <textarea
-                    class="message-textarea"
-                    v-model="description"
-                    cols="30"
-                    rows="6"
-                    placeholder="How Can We Help You?"
-                ></textarea>
-                <div class="file-label">
-                    <font-awesome-icon icon="paperclip" />
-                    <label for="file">Attach Files</label>
+            <div class="contact-us-grid">
+                <div>
+                    <form
+                        @submit.prevent="sendForm()"
+                        enctype="multipart/form-data"
+                        class="contact-form"
+                        action=""
+                    >
+                        <h3 class="form-header">send a message</h3>
+                        <FormGroup
+                            fType="text"
+                            fId="fullName"
+                            @updated="(model) => (fullName = model)"
+                            >Name(First,Last)*</FormGroup
+                        >
+                        <FormGroup
+                            fType="tel"
+                            fId="phone"
+                            @updated="(model) => (phone = model)"
+                            >Phone*</FormGroup
+                        >
+                        <FormGroup
+                            fType="text"
+                            fId="email"
+                            @updated="(model) => (email = model)"
+                            >Email*</FormGroup
+                        >
+                        <textarea
+                            class="message-textarea"
+                            v-model="description"
+                            cols="30"
+                            rows="6"
+                            placeholder="How Can We Help You?"
+                        ></textarea>
+                        <div class="file-label">
+                            <font-awesome-icon icon="paperclip" />
+                            <label for="file">Attach Files</label>
+                        </div>
+                        <input
+                            class="form-file"
+                            type="file"
+                            @change="fileChanged"
+                            id="file"
+                        />
+                        <div v-if="files.length">
+                            <SingleFile
+                                v-for="file in files"
+                                :key="file"
+                                :file="file"
+                                @deleteFile="deleteFile"
+                            />
+                        </div>
+                        <button class="message-submit-btn" type="submit">
+                            send
+                        </button>
+                    </form>
+                    <p class="privacy-terms">
+                        This site is protected by reCAPTCHA and the Google
+                        <a href="https://policies.google.com/privacy"
+                            >Privacy Policy</a
+                        >
+                        and
+                        <a href="https://policies.google.com/terms"
+                            >Terms of Service</a
+                        >
+                        apply.
+                    </p>
                 </div>
-                <input
-                    class="form-file"
-                    type="file"
-                    @change="fileChanged"
-                    id="file"
-                />
-                <div v-if="files.length">
-                    <SingleFile
-                        v-for="file in files"
-                        :key="file"
-                        :file="file"
-                        @deleteFile="deleteFile"
-                    />
-                </div>
-                <button class="message-submit-btn" type="submit">send</button>
-            </form>
-            <p class="privacy-terms">
-                This site is protected by reCAPTCHA and the Google
-                <a href="https://policies.google.com/privacy">Privacy Policy</a>
-                and
-                <a href="https://policies.google.com/terms">Terms of Service</a>
-                apply.
-            </p>
-            <section class="links-times-section">
-                <h4>The care you deserve!</h4>
-                <p>
-                    Contact us directly with any questions, comments, or
-                    scheduling inquiries you may have.
-                </p>
-                <a href="https://wa.me/61473943744" class="new-feature-btn"
-                    ><img
-                        class="whatsapp-svg"
-                        src="@/assets/svgs/whatsapp.svg"
-                        alt="My Happy SVG"
-                    />
-                    <span> Message us on WhatsApp</span></a
-                >
-                <h5>faroptic</h5>
-                <a class="support-email" href="mailTo:support@faroptic.com"
-                    >support@faroptic.com</a
-                >
-                <h5>hours</h5>
-                <div class="work-hours-container">
-                    <p class="work-hours">Monday - Friday: 8:00am - 5:30pm</p>
-                    <p class="work-hours">Saturday: 8:30am - 1:00pm</p>
-                    <p class="work-hours">Sunday: Closed</p>
-                </div>
-            </section>
+                <aside class="links-times-aside">
+                    <h4>The care you deserve!</h4>
+                    <p>
+                        Contact us directly with any questions, comments, or
+                        scheduling inquiries you may have.
+                    </p>
+                    <a href="https://wa.me/61473943744" class="new-feature-btn"
+                        ><img
+                            class="whatsapp-svg"
+                            src="@/assets/svgs/whatsapp.svg"
+                            alt="My Happy SVG"
+                        />
+                        <span> Message us on WhatsApp</span></a
+                    >
+                    <h5>faroptic</h5>
+                    <a class="support-email" href="mailTo:support@faroptic.com"
+                        >support@faroptic.com</a
+                    >
+                    <h5>hours</h5>
+                    <div class="work-hours-container">
+                        <p class="work-hours">
+                            Monday - Friday: 8:00am - 5:30pm
+                        </p>
+                        <p class="work-hours">Saturday: 8:30am - 1:00pm</p>
+                        <p class="work-hours">Sunday: Closed</p>
+                    </div>
+                </aside>
+            </div>
         </div>
     </section>
 
@@ -385,6 +405,7 @@ h1 {
 
 .home-img {
     display: block;
+    object-fit: contain;
     width: 100%;
 }
 
@@ -423,9 +444,10 @@ h1 {
 
 .download-links {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 3em;
+    padding-inline: 2em;
     margin-top: 2em;
     img {
         width: 90px;
@@ -478,6 +500,36 @@ h1 {
         margin-bottom: 2em;
     }
 }
+
+.feature-grid {
+    display: grid;
+    grid-template-areas:
+        'triple-tap-video'
+        'displaced-markers'
+        'flat-top-video'
+        'Flat-top-segments'
+        'new-features-img'
+        'video-library';
+
+    & .grid-child:nth-child(1) {
+        grid-area: triple-tap-video;
+    }
+    & .grid-child:nth-child(2) {
+        grid-area: displaced-markers;
+    }
+    & .grid-child:nth-child(3) {
+        grid-area: flat-top-video;
+    }
+    & .grid-child:nth-child(4) {
+        grid-area: Flat-top-segments;
+    }
+    & .grid-child:nth-child(5) {
+        grid-area: new-features-img;
+    }
+    & .grid-child:nth-child(6) {
+        grid-area: video-library;
+    }
+}
 .new-feature-btn {
     text-transform: uppercase;
     font-family: 'Montserrat', arial, sans-serif;
@@ -490,6 +542,7 @@ h1 {
     color: var(--btn-primary);
     cursor: pointer;
     margin-bottom: 0.7em;
+    width: fit-content;
 }
 
 .slider {
@@ -610,7 +663,7 @@ h1 {
     }
 }
 
-.links-times-section {
+.links-times-aside {
     h4 {
         text-transform: uppercase;
         color: var(--text-4);
@@ -634,7 +687,6 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: fit-content;
         gap: 1em;
         margin-inline: auto;
 
@@ -669,6 +721,50 @@ h1 {
     img {
         width: 44px;
         overflow: hidden;
+    }
+}
+
+@media (min-width: 40em) {
+    .feature-grid {
+        grid-template-areas:
+            'triple-tap-video displaced-markers'
+            'Flat-top-segments flat-top-video'
+            'new-features-img video-library';
+
+        gap: 3em;
+        .grid-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width: 55em) {
+    .contact-us-grid {
+        display: flex;
+        gap: 3em;
+    }
+
+    .links-times-aside {
+        text-align: left;
+
+        p {
+            text-align: left;
+        }
+
+        .new-feature-btn {
+            margin-inline: 0;
+        }
+    }
+}
+
+@media (min-width: 66em) {
+    .who-we-are-aside .container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 3em;
     }
 }
 </style>

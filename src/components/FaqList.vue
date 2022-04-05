@@ -1,5 +1,7 @@
 <template>
-    <SingleFaq v-for="(faq, i) in faqs" :key="i" :faq="faq" />
+    <article class="faqs">
+        <SingleFaq v-for="(faq, i) in faqs" :key="i" :faq="faq" />
+    </article>
 </template>
 
 <script>
@@ -10,4 +12,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.faqs {
+    width: min(55em, 100%);
+    margin-inline: auto;
+}
+</style>

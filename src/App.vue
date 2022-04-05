@@ -2,14 +2,16 @@
     <Header />
     <router-view />
     <Footer />
+    <MessagePopUp />
 </template>
 
 <script>
 import '@/assets/css/global.css'
 import Header from './components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import MessagePopUp from '@/components/MessagePopUp.vue'
 export default {
-    components: { Header, Footer },
+    components: { Header, Footer, MessagePopUp },
 }
 </script>
 <style>

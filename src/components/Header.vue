@@ -1,6 +1,6 @@
 <template>
-    <header class="main-header">
-        <div class="desktop-view">
+    <header class="">
+        <div class="main-header desktop-view">
             <nav class="header-nav" role="navigation" aria-label="Main">
                 <router-link :to="{ name: 'home' }">home</router-link>
                 <router-link :to="{ name: 'privacyPolicy' }"
@@ -25,21 +25,23 @@
                             class="overlay-close-btn"
                     /></span>
                     <div class="container">
-                        <router-link
-                            @click="showOverlay = false"
-                            :to="{ name: 'home' }"
-                            >home</router-link
-                        >
-                        <router-link
-                            @click="showOverlay = false"
-                            :to="{ name: 'privacyPolicy' }"
-                            >privacy policy</router-link
-                        >
-                        <router-link
-                            @click="showOverlay = false"
-                            :to="{ name: 'videoLibrary' }"
-                            >Video library</router-link
-                        >
+                        <nav role="navigation" aria-label="Main">
+                            <router-link
+                                @click="showOverlay = false"
+                                :to="{ name: 'home' }"
+                                >home</router-link
+                            >
+                            <router-link
+                                @click="showOverlay = false"
+                                :to="{ name: 'privacyPolicy' }"
+                                >privacy policy</router-link
+                            >
+                            <router-link
+                                @click="showOverlay = false"
+                                :to="{ name: 'videoLibrary' }"
+                                >Video library</router-link
+                            >
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -88,6 +90,7 @@ export default {
 .mobile-view {
     display: inline-block;
     .bars {
+        margin: 0.5em;
         font-size: 1.5rem;
         cursor: pointer;
     }
@@ -103,7 +106,7 @@ export default {
     padding-block: 6em;
     transition: all 0.3s ease-in-out;
 
-    .container {
+    nav {
         display: flex;
         flex-direction: column;
         gap: 2em;
@@ -143,7 +146,7 @@ export default {
     width: 100%;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 40em) {
     .mobile-view {
         display: none;
     }

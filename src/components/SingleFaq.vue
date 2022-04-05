@@ -25,6 +25,7 @@ export default {
 <style lang="scss">
 .question-answer {
     border-bottom: 1px solid var(--border-primary);
+    margin-inline: auto;
 }
 
 .question-container {

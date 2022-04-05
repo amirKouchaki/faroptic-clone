@@ -11,9 +11,10 @@ import {
     faPaperclip,
     faXmark,
     faBars,
+    faMessage,
 } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faAngleUp, faAngleDown, faPaperclip, faXmark, faBars)
+library.add(faAngleUp, faAngleDown, faPaperclip, faXmark, faBars, faMessage)
 
 createApp(App)
     .use(router)
