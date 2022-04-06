@@ -1,11 +1,21 @@
 <template>
-    <div class="message-fixed">
-        <font-awesome-icon icon="message" />
+    <div class="message-fixed" @click="showPopUp = !showPopUp">
+        <font-awesome-icon icon="message" v-if="!showPopUp" />
+        <font-awesome-icon icon="xmark" v-if="showPopUp" />
     </div>
+    <PopUp v-if="showPopUp" />
 </template>
 
 <script>
-export default {}
+import { ref } from '@vue/reactivity'
+import PopUp from './PopUp.vue'
+export default {
+    components: { PopUp },
+    setup() {
+        const showPopUp = ref(false)
+        return { showPopUp }
+    },
+}
 </script>
 
 <style lang="scss">
@@ -16,12 +26,11 @@ export default {}
     right: 32px;
     bottom: 32px;
     background-color: var(--bg-accent1);
-    width: 70px;
+    width: 63px;
     aspect-ratio: 1;
     font-size: 2rem;
     border-radius: 50%;
     cursor: pointer;
-
-    box-shadow: 0 0 10px 0.05px var(--text-secondary);
+    box-shadow: 0 0 7px 1px var(--box-shadow-primary);
 }
 </style>

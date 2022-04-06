@@ -5,9 +5,11 @@
     --bg-accent2-light: rgb(0, 0, 0);
     --bg-accent3-light: rgb(22, 22, 22);
     --link-primary-light: rgb(83, 128, 106);
+    --pop-up-message-bg-light: rgb(227, 241, 235);
     --text-header-primary-light: rgb(27, 27, 27);
     --link-nav-primary-light: rgb(94, 94, 94);
     --border-primary-light: rgb(228, 226, 226);
+    --border-secondary-light: rgb(196, 190, 190);
     --text-primary-light: #2c3e50;
     --text-secondary-light: rgb(94, 94, 94);
     --text-footer-primary-light: rgb(89, 89, 89);
@@ -16,6 +18,8 @@
     --text-3-light: rgb(255, 255, 255);
     --text-4-light: rgb(247, 247, 247);
     --privacy-paragraph-light: rgb(169, 169, 169);
+    --box-shadow-primary-light: rgba(0, 0, 0, 0.2);
+    --button-secondary-light: rgb(132, 202, 168);
 
     --bg-accent1: var(--bg-accent1-light);
     --bg-accent3: var(--bg-accent3-light);
@@ -32,6 +36,10 @@
     --text-4: var(--text-4-light);
     --bg-accent2: var(--bg-accent2-light);
     --privacy-paragraph: var(--privacy-paragraph-light);
+    --box-shadow-primary: var(--box-shadow-primary-light);
+    --pop-up-message-bg: var(--pop-up-message-bg-light);
+    --border-secondary: var(--border-secondary-light);
+    --button-secondary: var(--button-secondary-light);
 }
 
 * {
@@ -69,4 +77,9 @@ img {
 
 .reset-margin {
     margin: 0 !important;
+}
+
+.privacy-terms {
+    font-family: 'Montserrat', arial, sans-serif;
+    font-size: 0.8rem;
 }

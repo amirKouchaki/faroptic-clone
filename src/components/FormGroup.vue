@@ -17,7 +17,6 @@
 
 <script>
 import { ref } from '@vue/reactivity'
-import { watch } from '@vue/runtime-core'
 export default {
     props: ['fType', 'fId'],
     setup() {
@@ -30,8 +29,21 @@ export default {
 <style lang="scss">
 .form-group {
     transition: all 300ms;
-    margin-top: 2em;
     text-align: left;
+    margin-top: 0.5em;
+    &.dark {
+        .form-label {
+            color: var(--text-primary);
+        }
+        .form-control {
+            border: 1px solid var(--border-secondary);
+            color: var(--text-primary);
+
+            &:focus {
+                border-color: var(--text-secondary);
+            }
+        }
+    }
     .form-control {
         display: block;
         width: 100%;
@@ -55,6 +67,10 @@ export default {
         &:not(:placeholder-shown) + .form-label {
             transform: translate(0.5em, -3em) scale(0.8);
             color: var(--link-primary);
+        }
+
+        &:focus {
+            border-color: var(--text-4);
         }
     }
 

@@ -193,9 +193,7 @@
                                 @deleteFile="deleteFile"
                             />
                         </div>
-                        <button class="message-submit-btn" type="submit">
-                            send
-                        </button>
+                        <FormButton />
                     </form>
                     <p class="privacy-terms">
                         This site is protected by reCAPTCHA and the Google
@@ -273,6 +271,7 @@ import Heading1 from '@/components/Heading.vue'
 import FormGroup from '../components/FormGroup.vue'
 import SingleFile from '../components/SingleFile.vue'
 import Vcarousel from '@/components/Vcarousel.vue'
+import FormButton from '@/components/FormButton.vue'
 
 // @ is an alias to /src
 export default {
@@ -285,6 +284,7 @@ export default {
         FormGroup,
         SingleFile,
         Vcarousel,
+        FormButton,
     },
     setup() {
         const faqs = ref([
@@ -577,6 +577,10 @@ h1 {
         margin-top: 2em;
     }
 
+    .form-group {
+        margin-top: 2em;
+    }
+
     .message-textarea {
         border: 2px solid var(--text-4);
         outline: none;
@@ -590,6 +594,10 @@ h1 {
         font-family: 'Montserrat', arial, sans-serif;
         margin-top: 2em;
         border-radius: 0.3em;
+
+        &:focus {
+            border-color: var(--text-4);
+        }
     }
 
     .form-file {
@@ -610,56 +618,6 @@ h1 {
             display: inline-block;
             z-index: 1;
         }
-    }
-
-    .message-submit-btn {
-        position: relative;
-        display: block;
-        width: 100%;
-        margin-top: 2em;
-        padding-block: 0.8em;
-        border-radius: 3em;
-        border: 2px solid var(--text-4);
-        background-color: transparent;
-        color: var(--text-4);
-        font-family: 'Montserrat', arial, sans-serif;
-        font-weight: bold;
-        font-size: 1.1rem;
-        z-index: 0;
-        cursor: pointer;
-
-        overflow: hidden;
-
-        &::before {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            content: '';
-            transition: 300ms ease;
-            color: var(--bg-accent2);
-            z-index: -1;
-            background-color: var(--text-3);
-            transform-origin: top;
-            width: 110%;
-            transform: translateX(-100%) skew(-30deg);
-            transition: all 300ms ease;
-        }
-        &:hover::before,
-        &:focus::before {
-            transform: translateX(0);
-        }
-
-        &:hover,
-        &:focus {
-            color: var(--bg-accent2);
-        }
-    }
-
-    .privacy-terms {
-        font-family: 'Montserrat', arial, sans-serif;
-        font-size: 0.8rem;
     }
 }
 
