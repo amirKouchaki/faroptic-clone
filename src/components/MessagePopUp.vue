@@ -3,7 +3,7 @@
         <font-awesome-icon icon="message" v-if="!showPopUp" />
         <font-awesome-icon icon="xmark" v-if="showPopUp" />
     </div>
-    <PopUp v-if="showPopUp" />
+    <PopUp v-if="showPopUp" @close-pop-up="showPopUp = !showPopUp" />
 </template>
 
 <script>

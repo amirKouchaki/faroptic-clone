@@ -2,6 +2,11 @@
     <section class="support-section">
         <div class="bg-accent1 pop-up-header">
             <h2 class="pop-up-container">faroptic</h2>
+            <font-awesome-icon
+                class="icon"
+                icon="xmark"
+                @click="$emit('closePopUp')"
+            />
         </div>
 
         <div class="pop-up-container">
@@ -55,6 +60,14 @@ export default { components: { FormGroup, FormButton } }
 
 .pop-up-header {
     padding: 0.7em 1em 2.3em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
 }
 .support-section {
     position: fixed;
@@ -142,6 +155,10 @@ export default { components: { FormGroup, FormButton } }
         border-radius: 0.5em;
         width: 23.5em;
         overflow: auto;
+    }
+
+    .icon {
+        display: none;
     }
 }
 </style>
