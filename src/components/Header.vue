@@ -46,6 +46,10 @@
                 </div>
             </div>
         </span>
+        <div class="container logo-container">
+            <img src="@/assets/images/logo.webp" alt="logo" />
+            <h1>optofitting</h1>
+        </div>
     </header>
 </template>
 
@@ -61,6 +65,19 @@ export default {
 </script>
 
 <style lang="scss">
+h1 {
+    font-size: 1.5rem;
+    margin-top: 0.2em;
+    letter-spacing: 1px;
+    font-family: 'Archivo Black', sans-serif;
+    color: var(--text-header-primary);
+}
+
+.logo-container {
+    text-align: center;
+    margin-block: 3em;
+}
+
 .main-header {
     padding: 1.3em 1em;
     background-color: var(--bg-accent1);

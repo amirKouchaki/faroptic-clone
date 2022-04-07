@@ -5,6 +5,7 @@
     --bg-accent2-light: rgb(0, 0, 0);
     --bg-accent3-light: rgb(22, 22, 22);
     --link-primary-light: rgb(83, 128, 106);
+    --link-secondary-light: rgb(39, 83, 62);
     --pop-up-message-bg-light: rgb(227, 241, 235);
     --text-header-primary-light: rgb(27, 27, 27);
     --link-nav-primary-light: rgb(94, 94, 94);
@@ -40,6 +41,7 @@
     --pop-up-message-bg: var(--pop-up-message-bg-light);
     --border-secondary: var(--border-secondary-light);
     --button-secondary: var(--button-secondary-light);
+    --link-secondary: var(--link-secondary-light);
 }
 
 * {
@@ -49,7 +51,7 @@
 }
 
 a {
-    color: var(--bg-accent1);
+    color: var(--link-primary);
     text-decoration: none;
 }
 
@@ -82,4 +84,8 @@ img {
 .privacy-terms {
     font-family: 'Montserrat', arial, sans-serif;
     font-size: 0.8rem;
+}
+
+.privacy-terms a {
+    color: var(--bg-accent1);
 }

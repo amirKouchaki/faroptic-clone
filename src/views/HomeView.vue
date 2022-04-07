@@ -1,10 +1,10 @@
 <template>
-    <section class="hero container">
-        <img src="@/assets/images/logo.webp" alt="logo" />
-        <h1>optofitting</h1>
-        <Iframe
-            iSrc="https://player.vimeo.com/video/674464619?h=2cbd4818da&autoplay=1&loop=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
-        />
+    <section class="hero">
+        <div class="container">
+            <Iframe
+                iSrc="https://player.vimeo.com/video/674464619?h=2cbd4818da&autoplay=1&loop=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
+            />
+        </div>
     </section>
     <aside class="who-we-are-aside">
         <div class="container">
@@ -388,15 +388,7 @@ export default {
 <style lang="scss">
 .hero {
     text-align: center;
-    padding: 2em 0;
-}
-
-h1 {
-    font-size: 1.5rem;
-    margin-top: 0.2em;
-    letter-spacing: 1px;
-    font-family: 'Archivo Black', sans-serif;
-    color: var(--text-header-primary);
+    margin-bottom: 2em;
 }
 
 .whatsapp-svg {
