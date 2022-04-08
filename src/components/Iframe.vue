@@ -1,5 +1,5 @@
 <template>
-    <div class="hero-iframe grid-child">
+    <div class="hero-iframe">
         <iframe
             frameborder="0"
             :src="iSrc"

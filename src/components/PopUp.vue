@@ -48,27 +48,7 @@ import FormButton from './FormButton.vue'
 export default { components: { FormGroup, FormButton } }
 </script>
 
-<style lang="scss" scoped>
-.pop-up-container {
-    width: 90%;
-    margin-inline: auto;
-}
-
-.bg-accent1 {
-    background-color: var(--bg-accent1);
-}
-
-.pop-up-header {
-    padding: 0.7em 1em 2.3em 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .icon {
-        font-size: 1.3rem;
-        cursor: pointer;
-    }
-}
+<style lang="scss">
 .support-section {
     position: fixed;
     left: 0;
@@ -79,6 +59,26 @@ export default { components: { FormGroup, FormButton } }
 
     box-shadow: 0 0 7px 3px var(--box-shadow-primary);
 
+    .pop-up-container {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .bg-accent1 {
+        background-color: var(--bg-accent1);
+    }
+
+    .pop-up-header {
+        padding: 0.7em 1em 2.3em 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .icon {
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+    }
     h2 {
         font-family: 'Montserrat', arial, sans-serif;
         letter-spacing: 1.2px;
@@ -119,6 +119,7 @@ export default { components: { FormGroup, FormButton } }
     .privacy-terms {
         font-size: 0.8rem;
         text-align: center;
+        margin-bottom: 1.2em;
     }
 }
 .box {
@@ -145,6 +146,9 @@ export default { components: { FormGroup, FormButton } }
 }
 
 @media (min-width: 40em) {
+    body {
+        overflow: auto;
+    }
     .support-section {
         left: unset;
         top: unset;

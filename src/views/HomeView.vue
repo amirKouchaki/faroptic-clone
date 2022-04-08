@@ -87,7 +87,7 @@
             <Heading>Some new features added</Heading>
             <div class="feature-grid">
                 <Iframe
-                    class="aspect-30"
+                    class="aspect-30 grid-child"
                     iTitle="vimeo video"
                     iSrc="https://player.vimeo.com/video/668225655?h=57e7d16b8a"
                 />
@@ -100,7 +100,7 @@
                     </p>
                 </div>
                 <Iframe
-                    class="aspect-50"
+                    class="aspect-50 grid-child"
                     iSrc="https://www.youtube.com/embed/9GtojuRcAnE"
                     title="YouTube video player"
                     frameborder="0"
@@ -604,11 +604,13 @@ export default {
         gap: 0.6em;
         margin-top: 1em;
         color: var(--link-primary);
+        width: fit-content;
         cursor: pointer;
         font-family: 'Montserrat', arial, sans-serif;
         & > label {
             display: inline-block;
-            z-index: 1;
+            z-index: 0;
+            cursor: inherit;
         }
     }
 }
